@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export const Item = ({id, titulo, imagen, categoria, stock, precio}) => {
 
     return (
@@ -19,7 +21,7 @@ export const Item = ({id, titulo, imagen, categoria, stock, precio}) => {
                 </p>
             </section>
             <footer>
-                <button className="Option">Ver detalle</button>
+                <Link to={`/item/${id}`} className="Option">Ver detalle</Link>
             </footer>
         </article>
     )
